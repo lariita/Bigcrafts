@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/img/favicon_io/favicon-32x32.png" type="image/x-icon">
+ <title>¡solicitar cotizaciòn!</title>
+ <link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="header__nav">
+            <div class="header__logo"> <!--logo es  el primer hijo de nav-->
+                <img src ="/assets/img/mover.gif" alt="logo_bigcrafts" class="img_nav">
+                
+            </div>
+            <ul class="header__menu">  <!--menu es el segundo hijo de nav-->
+                <li class="header__item">  <!--hijos del nav-->
+                    <a class="header__link" href="../index.html">BigCraf Home</a>
+                </li>
+                <li class="header__item">
+                    <a class="header__link" href="./teayudamoscon.html">Te Ayudamos Con:</a>
+                </li>
+                <li class="header__item">
+                    <a class="header__link" href="./plandetrabajo.html">Plan De Trabajo</a>
+                </li>
+                <li class="header__item">
+                    <a class="header__link" href="./comolohacemos.html">¿Como Lo Hacemos?</a>
+                </li>
+                <li class="header__item">
+                  <a class="header__link" href="./solicitarcoti.html">¡solicitar cotizaciòn!</a>
+              </li>
+            </ul>
+        </nav>
+       
+        
+        
+    </header>
+   <main>
+    <h1 >Contactanos!</h1>
+    <h2>En esta seccion podras ponerte en contacto con nosotros</h2>
+<form action="formulario">
+    <fieldset>
+        <legend><em>Contatanos!</em>:</legend>
+        <div>
+            <label for="name">Nombre:</label>
+        
+            <br>
+           
+            <input type="text" name="name" placeholder="Ej:Lara">
+        </div>
+<div>
+            <br>
+            <label for="surname">Apellido:</label>
+            <br>
+            <input type="text" name="surname" placeholder"="Ej:Ferretti">
+            <br>
+    </div>
+    
+     <div>
+      <br>
+            <label for="Mail">Mail</label>
+            <input type="email" name="Mail" required>
+            <input type="submit" value="Enviar Datos">
+
+            </div>
+            <div>
+               <br>
+                <label for=> Elegì tu pais de residencia </label>
+                <select name="pais">
+                <option value="Arg" 
+                name="pais"> Argentina</option>
+                <option value="Uy"
+                name="pais">Uruguay</option>
+                <option value="cl"
+                name="pais">Chile</option>
+                <option value="Mx" 
+                name="pais">Mexico</option>
+                <option value="Vn"
+                name="pais">Venezuela</option>
+                <option value="Bs"
+                name="pais">Brasil</option>
+                </select>
+            </div>
+           
+    </fieldset>
+</form>
+    </main>
+    <footer>
+        <h3>© 2024 BigsCrafts. Todos los derechos estan reservados.😁👍</h3>
+    </footer>
+</body>
+</html>
