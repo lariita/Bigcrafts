@@ -1,166 +1,110 @@
-*{
-    margin: 200;
-    padding: 10;
-    box-sizing: border-box;
+* {
+  margin: 200;
+  padding: 10;
+  box-sizing: border-box;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: white;
+}
 
+.inicio {
+  background-image: url(../assets/img/fondoinicio.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 body {
-    background-image: url(/assets/img/bigcraft\ \(3\).png);
-    font-family: Arvo;
-    color: white;
-    display: block;
-    align-content: center;
-}
-.inicio{
-    background-image: url(/assets/img/fondoinicio.png);
-}
-footer{
-    background-color: rgba(3, 3, 3, 0.645);
-    text-align: center;
+  background-image: url(../assets/img/bigcraft.png);
 }
 
-h1 ,h2{
-    text-align: center;
-    text-decoration:underline ;
+footer {
+  background-color: rgba(3, 3, 3, 0.645);
+  text-align: center;
 }
 
-img,video{
-    width: 620px;
-    display: block;
-    margin: auto;
-
-   
+h1 {
+  text-align: center;
+  text-decoration: underline;
 }
 
+h2, h3, p {
+  text-align: center;
+}
 
+img, video {
+  width: 620px;
+  display: block;
+  margin: auto;
+}
 
+.textogrande {
+  font-size: 2rem;
+}
 
-.header__nav{
-    width: 90%;
-    height:70px ;
-    margin: 0 auto;
-    background-color: rgba(14, 15, 15, 0.645);
-    display: flex;
-    justify-content: space-between;
-    border-radius: 20px;
- 
+.container {
+  width: 100px;
+  height: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr 3fr 1fr 0.5fr;
+  grid-template-areas: "pdtheader pdtheader pdtheader" "pdtmain pdtmain asidepdt1" "pdtmain pdtmain asidepdt2" "sectionpdt1 sectionpdt1 sectionpdt2" "pdtfooter pdtfooter pdtfooter";
+}
+.container .pdtheader {
+  grid-area: pdtheader;
+}
+.container .pdtmain {
+  grid-area: pdtmain;
+  background-color: rgba(137, 43, 226, 0.349);
+}
+.container .asidepdt1 {
+  grid-area: asidepdt1;
+  background-color: rgba(0, 255, 255, 0.288);
+}
+.container .asidepdt2 {
+  grid-area: asidepdt2;
+  background-color: rgba(0, 128, 0, 0.37);
+}
+.container .sectionpdt1 {
+  grid-area: sectionpdt1;
+  background-color: rgba(255, 192, 203, 0.288);
+}
+.container .sectionpdt2 {
+  grid-area: sectionpdt2;
+  background-color: rgba(255, 0, 0, 0.178);
+}
+.container .pdtfooter {
+  grid-area: pdtfooter;
+  background-color: rgba(238, 130, 238, 0.26);
+}
 
- }
-.header__menu{
-    display: flex;
-    list-style-type: none;
-    align-items: center;
-    padding:10px;
-    border-radius: 20px;
+.clhmian {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 5px 6px;
+  grid-auto-flow: row;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  grid-template-areas: "1" "2";
 }
-.header__item{
-    padding: 10px;
-}
-.header__link{
-    color: rgb(158, 15, 94);
-    text-decoration: none;
-    padding: 10px;
-}
-.header__link:hover{
-    color: rgb(253, 57, 178);
-    background-color: rgb(152, 55, 190);
-    border-radius: 20px;
-}
-.img_nav{
-    width: 150px;
-    height: 90px;
-}
-.textogrande{
-    font-size: 2rem;
-}
-/* pagina plan de trabajo*/
 
-  .pdtmain div{
-    display: flex;
+@media screen and (max-width: 992px) {
+  .img .video {
+    width: 300vw;
   }
-  
-  
-.pdtmain{
-    display: grid; 
-    grid-auto-columns: 1fr; 
-    grid-template-columns: 1fr 1fr; 
-    grid-template-rows: 1fr 1fr; 
-    gap: 8px 6px; 
-    grid-template-areas: 
-      ". inmersion estrategia."
-      ".implementacion analisis ."; 
+  .column {
+    width: 50vw;
   }
-  
-.border{
-    border: double crimson 2px;
-
+}
+@media screen and (min-width: 350px) {
+  .img .video {
+    width: 300vw;
+  }
+  .column {
+    width: 50vw;
+  }
 }
 
- @media screen and (min-width: 501px ) {
-    .pdtmain div{
-        flex-direction: row;
-        background-color: blueviolet;
-
-       
-
-    }
-     
-
-}
-@media only screen and (max-width:780px){
-   .pdtmain div{
-    grid-template-columns: 2fr ;
-    background-color: rgb(157, 255, 0);
-    grid-template-columns: 1fr;
-   }
-
-    }
-
-
-    
-
-/*pagina como lo haremos*/
-.clhmian{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-auto-columns: 1fr;
-    gap: 5px 6px;
-    grid-auto-flow: row;
-    justify-content: center; 
-    align-content: center; 
-    justify-items: center; 
-    align-items: center; 
-    text-align: center;
-    grid-template-areas:
-     "1"
-     "2";
-
-    
-      
-}
-@media screen and (min-width: 501px ) {
-    .clhmain{
-        flex-direction: column;
-        background-color: blueviolet;
-        
-
-       
-
-    }
-     
-
-}
-@media only screen and (max-width:780px){
-   .clhmain, video, footer {
-    width:100%;
-    max-width: 300px;
-    height: auto;
-    
-    
-   }
-
-    }
-
-
+/*# sourceMappingURL=estilo.css.map */
