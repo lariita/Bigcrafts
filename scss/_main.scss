@@ -1,0 +1,230 @@
+@import "_mixins.scss";
+@import "_variables.scss";
+
+
+
+body{
+    background-image:url(../assets/img/fon-azulado.png);
+    color:rgb(0, 0, 0);
+    @include center;
+    font-size: 1rem;
+    font-family: "Freeman", sans-serif;
+    .freeman-regular {
+      font-family: "Freeman", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+    
+
+
+    
+   
+}
+main{
+  @import url('https://fonts.googleapis.com/css2?family=Freeman&display=swap');
+    padding: 20px;
+    margin: 20px;
+    border: 20px;
+    @include center;
+    .carousel-item{
+        width: 600px;
+        margin-right: 25px;
+    }
+    img{
+      border-radius: 20px;
+      width: 400px;
+    }
+    h1{
+     font-size: 25px;
+     font-weight: bold;
+     margin-bottom: 36px;
+     @include center;
+     font-family: "Freeman", sans-serif;
+
+    
+
+    }
+    h3{
+        margin-bottom: 36px;
+        font-size: 1rem;
+        font-family: "Freeman", sans-serif;
+
+
+    }
+    h2 {
+      color: $color-text;
+      text-decoration: underline;
+      font-size: 1rem;
+      margin-bottom: 30px;
+      padding-bottom: 5px;
+      height: 30px;
+      width: 540px;
+      font-style: bold;
+      font-family: "Freeman", sans-serif;
+     
+
+
+    }
+    p{
+      color: $color-text;
+      font-size: 1,3rem;
+      width: 400px; 
+      margin-bottom: 15px;
+      font-style: bold;
+      font-family: "Freeman", sans-serif;
+     
+    }
+    .sabermas{
+        margin: 0 auto;
+        width: 120px;
+        height: 20px;
+        background-color:white;
+        border-radius: 20px;
+        font-style: italic;
+        
+    }
+    .hidden{
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient:vertical;
+        overflow: hidden;
+
+    }
+    a{
+        @include center;
+        color:$headerlink;
+        padding-bottom: 12px;
+        &:hover{
+           color:$headerhover; 
+        }
+    }
+}  
+
+.body-flex {
+  background-image: url(../assets/img/fon-azulado.png);
+  
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  @include center;
+
+  .item {
+    flex-basis: 30%;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+
+    img {
+      width: 400px; 
+      height: auto;
+      margin-bottom: 20px;
+      border-radius: 20px;
+    }
+
+    h2 {
+      color: $color-text;
+      font-size: 18px;
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+     
+    
+    }
+
+    p {
+      color: $color-text;
+      font-size: 14px;
+      width: 400px; 
+      margin-bottom: 15px;
+    }
+  }
+}
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 700px;
+  gap: 15px;
+  padding:10px;
+
+  .section1 {
+    padding: 20px;
+    img{
+      width: 300px;
+      border-radius: 120px;
+    }
+  }
+
+  .section2 {
+    padding: 20px;
+
+    .contact-form {
+      h3 {
+        margin-bottom: 5px;
+      }
+
+      input,
+      textarea {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+        color: #ff66c4;
+      }
+
+      button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background-color: #ff66c4;
+        color: $headerlink;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr; 
+    @include center;
+    footer{
+      width: 100%;
+
+    }
+    .section2 {
+      .contact-form {
+        @include center;
+        input,
+        textarea {
+          margin-bottom: 26px; 
+          padding-bottom: 26px;
+          box-sizing: border-box;
+        }
+        button {
+          font-size:15px; 
+        }
+      }
+    }
+  }
+}
+.video-container {
+  position: end;
+  padding-bottom: 15px;
+  height: 0;
+  
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 768px) {
+    padding-bottom: 10%; 
+  }
+  .element {
+    animation: fadeIn 1s ease-in-out;
+  }
+}
+  
+

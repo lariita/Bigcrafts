@@ -1,0 +1,32 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.container-fluid{
+    display: flex;
+    @include center;
+}
+.custom-navbar{
+  border-radius: 300px;
+}
+.navbar-nav{
+    display: flex;
+    margin: 0 auto;
+    @include center;
+    font-size: 0.8rem;
+    border-radius: 40%;
+    .nav-link{
+      color:$headerlink;
+          &:hover{
+              color: $headerhover;
+          }
+    }
+    .navbar-brand{
+     display: flex;
+     margin: 0 auto;
+    }
+    .nav-link nav-link-active{
+    display: flex;
+    margin: 0 auto;
+    
+  }
+}

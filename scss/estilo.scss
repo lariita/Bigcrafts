@@ -1,105 +1,59 @@
+@import "_footer.scss";
+@import "_header.scss";
+@import "_main.scss";
+@import "_mediaqueries.scss";
+@import "_mixins.scss";
+@import "_reset.scss";
+@import "_variables.scss";
 *{
-    margin: 200;
-    padding: 10;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: 10px;
     color: white;
 }
-$colorfooter:rgba(3, 3, 3, 0.645);
-$colorfont: white;
-$headernav:rgba(14, 15, 15, 0.645);
-$headerlink:  rgb(158, 15, 94);
-$headerhover:  rgb(253, 57, 178);
-
-
-.inicio{
-    background-image: url(../assets/img/fondoinicio.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-body{
-    background-image: url(../assets/img/bigcraft.png);
-}
-footer{
-    background-color: $colorfooter;
-    text-align: center;
-}
+.freeman-regular {
+    font-family: "Freeman", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
 
 h1{
-    text-align: center;
-    text-decoration:underline ;
+    color: #ff66c4;
 }
-h2,h3,p{
+h1,h3{
     text-align: center;
+    font-size: 1.3rem;
+    
+    
+}
+h2,p{
+    @include text;
+    @include center;
+    color:black;
+    
+
 }
 
 img,video{
-    width: 620px;
+    width: 520px;
     display: block;
     margin: auto;
 }
-.textogrande{
-    font-size: 2rem;
-}
 
-.container{  
-    width: 100px;
-    height: 10px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.5fr 1fr 3fr 1fr 0.5fr;
-    grid-template-areas:
-    "pdtheader pdtheader pdtheader"
-    "pdtmain pdtmain asidepdt1"
-    "pdtmain pdtmain asidepdt2"
-    "sectionpdt1 sectionpdt1 sectionpdt2"
-    "pdtfooter pdtfooter pdtfooter";
-  
-    .pdtheader { grid-area: pdtheader;}
-  
-    .pdtmain { grid-area: pdtmain;background-color: rgba(137, 43, 226, 0.349);}
-  
-    .asidepdt1 { grid-area: asidepdt1; background-color: rgba(0, 255, 255, 0.288);}
-  
-    .asidepdt2 { grid-area: asidepdt2;background-color: rgba(0, 128, 0, 0.37);}
-  
-    .sectionpdt1 { grid-area: sectionpdt1;background-color: rgba(255, 192, 203, 0.288);}
-  
-    .sectionpdt2 { grid-area: sectionpdt2; background-color: rgba(255, 0, 0, 0.178);}
 
-    .pdtfooter { grid-area: pdtfooter;background-color: rgba(238, 130, 238, 0.26);}
-}   
-.clhmian{
-    $enable-grid-classes: false;
-    $enable-cssgrid: true;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 5px 6px;
-    grid-auto-flow: row;
-    justify-content: center; 
-    align-content: center; 
-    justify-items: center; 
-    align-items: center; 
-    text-align: center;
-    grid-template-areas:
-    "1"
-    "2";
-}
-@media screen and (max-width: 992px) {
-    .img .video{
-        width:300vw;
-    } 
+footer{
+    background-color: $colorfooter;
+    @include center;
+    position: relative; 
+    font-size: 1rem;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     
-    .column {
-      width: 50vw;
-     }
 }
-@media screen and (min-width:350px){
-    .img .video{
-        width: 300vw;
-    }
-     .column{
-        width: 50vw;
-     }
+.main{
+    padding: 20px;
+    border: 20px;
 }

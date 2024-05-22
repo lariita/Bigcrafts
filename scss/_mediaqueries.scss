@@ -1,0 +1,24 @@
+@import "_mixins.scss";
+@media (max-width: 768px) {
+    footer{
+      width: 100%;
+
+    }
+    .section2 {
+        display: grid;
+        grid-template-columns: 1fr;
+      .contact-form {
+        @include center;
+        input,
+        textarea {
+          margin-bottom: 26px; 
+          padding-bottom: 26px;
+          box-sizing: border-box;
+        }
+        button {
+          font-size:15px; 
+        }
+      }
+    }
+  }
+

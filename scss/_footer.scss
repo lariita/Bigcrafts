@@ -1,0 +1,17 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+
+
+footer{
+    background-color:$colorfooter;
+    @include center;
+    font-size: 1rem;
+    position:relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    
+    
+    
+}
