@@ -14,10 +14,10 @@ footer {
   text-align: center;
   align-self: center;
   font-size: 1rem;
-  position: relative;
   left: 0;
   bottom: 0;
   width: 100%;
+  flex-shrink: 0;
 }
 
 .montserrat-uniquifier {
@@ -91,6 +91,27 @@ body .freeman-regular {
   font-family: "Freeman", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+@media (max-width: 768px) {
+  .body-media header {
+    width: 87px;
+  }
+  .body-media main {
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    text-align: center;
+    align-self: center;
+    width: 400px;
+  }
+  .body-media main video {
+    width: 300px;
+  }
+  .body-media footer {
+    width: 100%;
+  }
 }
 
 main {
@@ -180,8 +201,7 @@ main a:hover {
 .body-flex {
   background-image: url(../assets/img/fon-azulado.png);
 }
-
-.container {
+.body-flex .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -191,34 +211,68 @@ main a:hover {
   text-align: center;
   align-self: center;
 }
-.container .item {
+.body-flex .container .item {
   flex-basis: 30%;
   padding: 20px;
   margin-bottom: 10px;
   border-radius: 5px;
 }
-.container .item img {
+.body-flex .container .item img {
+  transition: transform 1s ease;
+}
+.body-flex .container img {
   width: 400px;
   height: auto;
   margin-bottom: 20px;
   border-radius: 20px;
 }
-.container .item h2 {
+.body-flex .container h2 {
   color: rgb(0, 0, 0);
   font-size: 18px;
   margin-bottom: 15px;
   padding-bottom: 15px;
 }
-.container .item p {
+.body-flex .container p {
   color: rgb(0, 0, 0);
   font-size: 14px;
   width: 400px;
   margin-bottom: 15px;
 }
+.body-flex footer {
+  display: flex;
+}
+@media (max-width: 768px) {
+  .body-flex header {
+    width: 87px;
+  }
+  .body-flex main {
+    width: 400px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    text-align: center;
+    align-self: center;
+  }
+  .body-flex main p {
+    width: 300px;
+  }
+  .body-flex main img {
+    width: 150px;
+  }
+  .body-flex footer {
+    align-items: flex-start;
+  }
+  .body-flex footer h3 {
+    order: 1;
+    align-items: flex-start;
+    font-size: 15px;
+  }
+}
 
 .main-grid {
   display: grid;
-  grid-template-columns: 1fr 700px;
+  grid-template-columns: 2fr 700px;
   gap: 15px;
   padding: 10px;
 }
@@ -231,89 +285,106 @@ main a:hover {
 }
 .main-grid .section2 {
   padding: 20px;
+  width: 500px;
 }
-.main-grid .section2 .contact-form h3 {
-  margin-bottom: 5px;
+.main-grid .section2 .btn-primary {
+  background-color: rgb(143, 0, 126);
+  border-color: #ff66c4;
 }
-.main-grid .section2 .contact-form input,
-.main-grid .section2 .contact-form textarea {
-  display: block;
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 10px;
-  color: #ff66c4;
-}
-.main-grid .section2 .contact-form button {
-  display: block;
-  width: 100%;
-  padding: 10px;
+.main-grid .section2 .btn-primary:hover {
   background-color: #ff66c4;
-  color: rgb(143, 0, 126);
-  border: none;
-  cursor: pointer;
+  border-color: rgb(143, 0, 126);
+}
+.main-grid .section2 footer {
+  width: 100%;
 }
 @media (max-width: 768px) {
-  .main-grid {
+  .main-grid header {
+    width: 87px;
+  }
+  .main-grid .main-grid {
     grid-template-columns: 1fr;
+    width: 200px;
     justify-content: center;
     align-items: center;
     align-content: center;
     justify-items: center;
     text-align: center;
     align-self: center;
+  }
+  .main-grid .main-grid img {
+    width: 60px;
+  }
+  .main-grid .main-grid footer {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    width: 87px;
+  }
+  .main-grid {
+    grid-template-columns: 1fr;
+    width: 450px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    text-align: center;
+    align-self: center;
+  }
+  .main-grid img {
+    width: 60px;
   }
   .main-grid footer {
     width: 100%;
   }
-  .main-grid .section2 .contact-form {
+  .main-grid footer h3 {
+    order: 1;
+    align-items: flex-start;
+    font-size: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .body-media header {
+    width: 87px;
+  }
+  .body-media main {
     justify-content: center;
     align-items: center;
     align-content: center;
     justify-items: center;
     text-align: center;
     align-self: center;
+    width: 400px;
   }
-  .main-grid .section2 .contact-form input,
-  .main-grid .section2 .contact-form textarea {
-    margin-bottom: 26px;
-    padding-bottom: 26px;
-    box-sizing: border-box;
+  .body-media main h2 {
+    width: 140px;
+    text-decoration: none;
   }
-  .main-grid .section2 .contact-form button {
+  .body-media main video {
+    width: 300px;
+  }
+  .body-media main img {
+    width: 300px;
+  }
+  .body-media footer {
+    width: 100%;
+  }
+  .body-media footer h3 {
+    order: 1;
+    align-items: flex-start;
     font-size: 15px;
   }
 }
 
-.video-container {
-  position: end;
-  padding-bottom: 15px;
-  height: 0;
-}
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
 @media (max-width: 768px) {
-  .video-container {
-    padding-bottom: 10%;
+  header {
+    width: 87px;
   }
-}
-.video-container .element {
-  animation: fadeIn 1s ease-in-out;
-}
-
-@media (max-width: 768px) {
-  footer {
-    width: 100%;
-  }
-  .section2 {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-  .section2 .contact-form {
+  main {
+    width: 400px;
     justify-content: center;
     align-items: center;
     align-content: center;
@@ -321,13 +392,18 @@ main a:hover {
     text-align: center;
     align-self: center;
   }
-  .section2 .contact-form input,
-  .section2 .contact-form textarea {
-    margin-bottom: 26px;
-    padding-bottom: 26px;
-    box-sizing: border-box;
+  main p {
+    width: 300px;
   }
-  .section2 .contact-form button {
+  main img {
+    width: 150px;
+  }
+  footer {
+    align-items: flex-start;
+  }
+  footer h3 {
+    order: 1;
+    align-items: flex-start;
     font-size: 15px;
   }
 }

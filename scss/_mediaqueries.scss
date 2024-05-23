@@ -1,24 +1,85 @@
 @import "_mixins.scss";
-@media (max-width: 768px) {
-    footer{
-      width: 100%;
 
-    }
-    .section2 {
-        display: grid;
-        grid-template-columns: 1fr;
-      .contact-form {
-        @include center;
-        input,
-        textarea {
-          margin-bottom: 26px; 
-          padding-bottom: 26px;
-          box-sizing: border-box;
+    //media pagina maquetada con grid:"solicitarcoti"
+    @media  (max-width: 768px) {
+      header{
+        width: 87px;
+      }
+      .main-grid{
+      grid-template-columns: 1fr; 
+      width: 450px;
+      @include center;
+      img{
+        width: 60px;
+      }
+      footer{
+        width: 100%;
+        h3{
+          order: 1;
+        align-items: flex-start;
+        font-size: 15px;
         }
-        button {
-          font-size:15px; 
+        
+    
         }
       }
     }
+    //paginas: "como lo hacemos"; "plan de trabajo"
+    .body-media{
+      @media  (max-width: 768px){
+        header{
+            width: 87px;
+        }
+        main{
+          @include center;
+          width: 400px;
+          h2{
+            width: 140px;
+            text-decoration: none;
+          }
+          video{
+            width: 300px
+          }
+          img{
+            width: 300px;
+          }
+        }
+        footer{
+          width: 100%;
+          h3{
+            order: 1;
+          align-items: flex-start;
+          font-size: 15px;
+          }
+          
+        }
+        
+      }
+    
+    }
+//pagina maquetada con flex: "te ayudamos con"
+@media  (max-width: 768px) {
+  header{
+    width: 87px;
   }
+  main{
+    width: 400px;
+    @include center;
+    p{
+      width: 300px;
+    }
+    img{
+      width: 150px;
+    }
+  }
+  footer{
+    align-items: flex-start;
+    h3{
+      order: 1;
+    align-items: flex-start;
+    font-size: 15px;
+    }
+  }
+
+}
 
